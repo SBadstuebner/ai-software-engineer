@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD Green"
+  short_description: "Make valid failing tests pass minimally"
+  default_prompt: "Use $tdd-green to implement the minimum production code needed to make the valid Red tests pass."

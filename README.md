@@ -12,6 +12,8 @@
   <br>
 </p>
 
+For an overview of the project's tech stack, dependencies, and structure, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ## Local Development
 
 | Command       | Description                                      |
@@ -21,9 +23,9 @@
 
 ## The API
 
-| Command              | Description                                       |
-| -------------------- | ------------------------------------------------- |
-| `npx bookmonkey-api` | Installs and starts the HTTP API "Bookmonkey API" |
+| Command       | Description                          |
+| ------------- | ------------------------------------ |
+| `npm run api` | Starts the HTTP API "Bookmonkey API" |
 
 The API provides fake data that you can use in your Angular application.
 
@@ -38,3 +40,5 @@ We added a few plugin recommendations to simplify writing code during the worksh
 
 1. Angular Language Service - Adds better syntax-highlighting & automatic refactorings
 1. Prettier - Formats your code automatically in the same way across your project.
+
+To start the frontend and API together, select **Full stack: Angular + Bookmonkey API** in VS Code's Run and Debug view. Once Angular is ready, the configuration opens `http://localhost:4200/` in a Chrome debugging session. Stopping the compound run terminates both server processes.

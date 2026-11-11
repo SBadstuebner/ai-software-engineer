@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title description">
+  <title id="title">TypeScript Without Guesswork</title>
+  <desc id="description">Indigo book cover with a grid pattern</desc>
+  <rect width="600" height="800" fill="#312e81" />
+  <g stroke="#818cf8" stroke-width="2" opacity=".35">
+    <path d="M0 100h600M0 200h600M0 300h600M0 400h600M0 500h600M0 600h600M0 700h600" />
+    <path d="M100 0v800M200 0v800M300 0v800M400 0v800M500 0v800" />
+  </g>
+  <rect x="52" y="70" width="496" height="660" rx="24" fill="#111827" opacity=".88" />
+  <text x="90" y="150" fill="#c7d2fe" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    WORKSHOP LIBRARY
+  </text>
+  <text x="90" y="305" fill="#fff" font-family="Arial, sans-serif" font-size="58" font-weight="700">TYPESCRIPT</text>
+  <text x="90" y="375" fill="#fff" font-family="Arial, sans-serif" font-size="42">WITHOUT</text>
+  <text x="90" y="435" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="48" font-weight="700">GUESSWORK</text>
+  <text x="90" y="665" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="28">SAM RIVERA</text>
+</svg>

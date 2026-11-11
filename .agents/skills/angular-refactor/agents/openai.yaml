@@ -1,0 +1,4 @@
+interface:
+  display_name: "Angular Refactor"
+  short_description: "Refactor Green Angular code safely"
+  default_prompt: "Use $angular-refactor to improve the Green implementation while preserving all tested behavior."

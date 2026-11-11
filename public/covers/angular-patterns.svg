@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="title description">
+  <title id="title">Angular Patterns in Practice</title>
+  <desc id="description">Blue and red geometric book cover</desc>
+  <rect width="600" height="800" fill="#0f172a" />
+  <path d="M0 0h600v250L0 510z" fill="#1d4ed8" />
+  <path d="M600 120v330L0 690V520z" fill="#dc2626" opacity=".9" />
+  <circle cx="455" cy="580" r="115" fill="none" stroke="#f8fafc" stroke-width="18" opacity=".85" />
+  <text x="54" y="110" fill="#dbeafe" font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    WORKSHOP LIBRARY
+  </text>
+  <text x="54" y="325" fill="#fff" font-family="Arial, sans-serif" font-size="62" font-weight="700">ANGULAR</text>
+  <text x="54" y="395" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700">PATTERNS</text>
+  <text x="54" y="455" fill="#fff" font-family="Arial, sans-serif" font-size="32">IN PRACTICE</text>
+  <text x="54" y="740" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="28">ALEX MORGAN</text>
+</svg>

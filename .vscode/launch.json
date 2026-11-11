@@ -15,6 +15,33 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
+    },
+    {
+      "name": "Angular frontend server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm start",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome",
+        "webRoot": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Bookmonkey API server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run api",
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full stack: Angular + Bookmonkey API",
+      "configurations": ["Angular frontend server", "Bookmonkey API server"],
+      "stopAll": true
     }
   ]
 }

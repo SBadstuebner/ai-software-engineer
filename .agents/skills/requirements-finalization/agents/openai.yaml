@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements Finalization"
+  short_description: "Verify delivery and close its GitHub issue"
+  default_prompt: "Use $requirements-finalization to verify the completed feature, update its GitHub issue, and close it when every completion gate passes."

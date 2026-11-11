@@ -1,0 +1,76 @@
+<div class="container mx-auto max-w-6xl px-4 py-8 sm:py-12">
+  <a
+    routerLink="/"
+    class="mb-8 inline-flex items-center gap-2 font-medium text-blue-700 hover:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700"
+  >
+    <span aria-hidden="true">&larr;</span>
+    Back to book collection
+  </a>
+
+  <app-loading-indicator *ngIf="status === 'loading'" message="Loading book details..." />
+
+  <section
+    *ngIf="status === 'not-found'"
+    role="alert"
+    class="rounded-xl border border-amber-200 bg-amber-50 px-6 py-12 text-center"
+  >
+    <h1 class="text-2xl font-bold text-gray-900">Book not found</h1>
+    <p class="mt-3 text-gray-700">The requested book does not exist or is no longer available.</p>
+  </section>
+
+  <section
+    *ngIf="status === 'request-failed'"
+    role="alert"
+    class="rounded-xl border border-red-200 bg-red-50 px-6 py-12 text-center"
+  >
+    <h1 class="text-2xl font-bold text-gray-900">Unable to load book</h1>
+    <p class="mt-3 text-gray-700">The book service could not be reached. Please try again later.</p>
+  </section>
+
+  <article *ngIf="book && status === 'loaded'" class="grid gap-8 md:grid-cols-[minmax(220px,320px)_1fr] md:gap-12">
+    <div class="overflow-hidden rounded-xl bg-gray-100 shadow-md">
+      <img
+        *ngIf="book.cover"
+        [src]="book.cover"
+        [alt]="'Cover of ' + book.title"
+        class="h-full w-full object-contain"
+      />
+      <div *ngIf="!book.cover" class="flex aspect-[3/4] items-center justify-center px-6 text-center text-gray-500">
+        No cover available
+      </div>
+    </div>
+
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wide text-blue-700">Book details</p>
+      <h1 class="mt-2 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">{{ book.title }}</h1>
+      <p *ngIf="book.subtitle" class="mt-3 text-xl text-gray-600">{{ book.subtitle }}</p>
+      <p class="mt-5 text-lg text-gray-700">by {{ book.author || 'Unknown author' }}</p>
+
+      <dl class="mt-8 grid gap-x-8 gap-y-5 border-y border-gray-200 py-6 sm:grid-cols-2">
+        <div>
+          <dt class="text-sm font-medium text-gray-500">Publisher</dt>
+          <dd class="mt-1 text-gray-900">{{ book.publisher || 'Not provided' }}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-medium text-gray-500">ISBN</dt>
+          <dd class="mt-1 text-gray-900">{{ book.isbn || 'Not provided' }}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-medium text-gray-500">Pages</dt>
+          <dd class="mt-1 text-gray-900">{{ book.numPages || 'Not provided' }}</dd>
+        </div>
+        <div>
+          <dt class="text-sm font-medium text-gray-500">Price</dt>
+          <dd class="mt-1 text-gray-900">{{ book.price || 'Not provided' }}</dd>
+        </div>
+      </dl>
+
+      <section class="mt-8" aria-labelledby="book-summary-heading">
+        <h2 id="book-summary-heading" class="text-xl font-bold text-gray-900">About this book</h2>
+        <p class="mt-3 whitespace-pre-line leading-7 text-gray-700">
+          {{ book.abstract || 'No description available.' }}
+        </p>
+      </section>
+    </div>
+  </article>
+</div>

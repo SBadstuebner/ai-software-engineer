@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD Red"
+  short_description: "Turn approved stories into failing tests"
+  default_prompt: "Use $tdd-red to turn the approved story into verified failing Jasmine and Playwright tests."
