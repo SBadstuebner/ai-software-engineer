@@ -24,10 +24,12 @@ jobs:
         with:
           openai-api-key: ${{ secrets.ANTHROPIC_API_KEY}}
           permission-profile: ":workspace"
-          model: "gpt-5.6-luna"
+          model: "gpt-5.6-"
           prompt: |
             ...
             /ci-re-review
                           
             REPOSITORY: ${{ github.repository }}
             ISSUE_NUMBER: ${{ github.event.issue.number || github.event.comment.issue_url }}
+env:
+  GH_TOKEN: ${{ secrets.PAT_TOKEN }}
