@@ -17,19 +17,16 @@ jobs:
 
     steps:
       - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Analyze Issue with Claude
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           permission-profile: ":workspace"
+          model: "gpt-5.6-luna"
           prompt: |
             ...
-      - name: Analyze Issue with Claude
-        uses: anthropics/claude-code-action@main
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          claude_args: '--allowedTools Bash(gh *)'
-          prompt: |
             /ci-re-review
                           
             REPOSITORY: ${{ github.repository }}
