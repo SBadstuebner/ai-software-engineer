@@ -47,7 +47,7 @@ jobs:
           permission-profile: issue-analysis
           model: 'gpt-5.6-luna'
           prompt: |
-            /ci-re-review
+            /claude-review
                          
             REPOSITORY: ${{ github.repository }}
             ISSUE_NUMBER: ${{ github.event.issue.number || github.event.comment.issue_url }}
